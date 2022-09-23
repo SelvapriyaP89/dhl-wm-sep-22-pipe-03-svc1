@@ -28,3 +28,14 @@ services:
    
 
   #entrypoint: /mnt/scripts/entrypoint.sh
+ pgsql:
+  image: postgres:14
+  restart: always
+  environment:
+    POSTGRES_PASSWORD: webmethods
+
+adminer:
+  image: adminer
+  restart: always
+  ports:
+    - 8080:8080
